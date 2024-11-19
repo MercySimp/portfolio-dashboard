@@ -3,100 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo Portfolio</title>
+  <meta name="description" content="Portfolio Dashboard to track performance and manage investments.">
+  <title>Portfolio Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
 </head>
 <body>
-  <div class="container">
-    <!-- Header Section -->
-    <header class="portfolio-header">
-      <h1>Demo Portfolio</h1>
-      <p>Updated 16 minutes ago</p>
-      <button class="add-btn">Add my portfolio</button>
-    </header>
+  <header>
+    <h1>Portfolio Dashboard</h1>
+    <button class="add-btn">Edit Portfolio</button>
+  </header>
 
-    <!-- Performance Section -->
-    <section class="performance-section">
-      <div class="performance-summary">
-        <h2>Performance vs Market</h2>
-        <div class="performance-stats">
-          <div>Total Value: <span>US$33,304</span></div>
-          <div>Total Returns: <span>US$18,004</span></div>
-          <div>Est. Dividend: <span>US$410/yr</span></div>
-        </div>
-        <div class="chart">
-          <!-- Placeholder for graph -->
-          <canvas id="performanceChart"></canvas>
-        </div>
-      </div>
-      <div class="portfolio-snowflake">
-        <h3>Portfolio Snowflake</h3>
-        <div class="snowflake-graphic">
-          <!-- Placeholder for graphic -->
-        </div>
-        <p>A proven past performer which is rather undervalued</p>
-      </div>
+  <main>
+    <!-- Performance Chart Section -->
+    <section id="performance">
+      <h2>Performance vs Market</h2>
+      <canvas id="performanceChart" width="800" height="400"></canvas>
     </section>
 
     <!-- Holdings Table -->
-    <section class="holdings-section">
+    <section id="holdings">
+      <h2>Holdings</h2>
       <table>
         <thead>
           <tr>
             <th>Symbol</th>
-            <th>Price vs Fair Value</th>
-            <th>7D Return</th>
-            <th>Total Return</th>
-            <th>Value & Cost</th>
-            <th>Weight & Shares</th>
-            <th>Avg. Price</th>
-            <th>1Y Chart</th>
+            <th>Price</th>
+            <th>Shares</th>
+            <th>Total Value</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Example row -->
-          <tr>
-            <td>Netflix</td>
-            <td class="undervalued">US$763.89<br><span>+4.3% undervalued</span></td>
-            <td>+5.7%</td>
-            <td>281.9%</td>
-            <td>US$7,639</td>
-            <td>22.9% / 10 shares</td>
-            <td>US$200.00</td>
-            <td>
-              <div class="mini-chart">
-                <!-- Placeholder for small chart -->
-              </div>
-            </td>
-          </tr>
+        <tbody id="holdingsTable">
+          <!-- Rows will be dynamically added -->
         </tbody>
       </table>
     </section>
+  </main>
+
+  <!-- Edit Portfolio Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Edit Portfolio</h3>
+      <form id="editForm">
+        <label for="symbol">Symbol:</label>
+        <input type="text" id="symbol" name="symbol" placeholder="e.g., AAPL" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" placeholder="e.g., 150.00" required>
+
+        <label for="shares">Shares:</label>
+        <input type="number" id="shares" name="shares" placeholder="e.g., 10" required>
+
+        <button type="submit">Save</button>
+      </form>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
-<!-- Edit Portfolio Modal -->
-<div id="editModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h3>Edit Portfolio</h3>
-    <form id="editForm">
-      <label for="symbol">Symbol:</label>
-      <input type="text" id="symbol" name="symbol" placeholder="e.g., AAPL">
-      
-      <label for="price">Price:</label>
-      <input type="number" id="price" name="price" placeholder="e.g., 150.00">
-
-      <label for="shares">Shares:</label>
-      <input type="number" id="shares" name="shares" placeholder="e.g., 10">
-      
-      <button type="submit">Save</button>
-    </form>
-  </div>
-</div>
-
-<div class="tooltip">
-  Total Returns: US$18,004
-  <span class="tooltip-text">Includes dividends</span>
-</div>
