@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header class="portfolio-header">
+      <h1>Demo Portfolio</h1>
+      <p>Updated 16 minutes ago</p>
+      <button class="add-btn">Add my portfolio</button>
+    </header>
+
+    <!-- Performance Section -->
+    <section class="performance-section">
+      <div class="performance-summary">
+        <h2>Performance vs Market</h2>
+        <div class="performance-stats">
+          <div>Total Value: <span>US$33,304</span></div>
+          <div>Total Returns: <span>US$18,004</span></div>
+          <div>Est. Dividend: <span>US$410/yr</span></div>
+        </div>
+        <div class="chart">
+          <!-- Placeholder for graph -->
+          <canvas id="performanceChart"></canvas>
+        </div>
+      </div>
+      <div class="portfolio-snowflake">
+        <h3>Portfolio Snowflake</h3>
+        <div class="snowflake-graphic">
+          <!-- Placeholder for graphic -->
+        </div>
+        <p>A proven past performer which is rather undervalued</p>
+      </div>
+    </section>
+
+    <!-- Holdings Table -->
+    <section class="holdings-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Price vs Fair Value</th>
+            <th>7D Return</th>
+            <th>Total Return</th>
+            <th>Value & Cost</th>
+            <th>Weight & Shares</th>
+            <th>Avg. Price</th>
+            <th>1Y Chart</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example row -->
+          <tr>
+            <td>Netflix</td>
+            <td class="undervalued">US$763.89<br><span>+4.3% undervalued</span></td>
+            <td>+5.7%</td>
+            <td>281.9%</td>
+            <td>US$7,639</td>
+            <td>22.9% / 10 shares</td>
+            <td>US$200.00</td>
+            <td>
+              <div class="mini-chart">
+                <!-- Placeholder for small chart -->
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

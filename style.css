@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.portfolio-header h1 {
+  font-size: 24px;
+}
+
+.portfolio-header .add-btn {
+  background-color: #1f7cfc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Performance Section */
+.performance-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.performance-summary {
+  width: 70%;
+}
+
+.performance-stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart {
+  margin-top: 20px;
+}
+
+.portfolio-snowflake {
+  width: 28%;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Holdings Table */
+.holdings-section {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background-color: #333;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.undervalued {
+  color: #4caf50;
+}
+
+.mini-chart {
+  width: 80px;
+  height: 40px;
+  background-color: #555;
+  border-radius: 5px;
+}
