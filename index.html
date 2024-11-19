@@ -76,3 +76,27 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!-- Edit Portfolio Modal -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3>Edit Portfolio</h3>
+    <form id="editForm">
+      <label for="symbol">Symbol:</label>
+      <input type="text" id="symbol" name="symbol" placeholder="e.g., AAPL">
+      
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" placeholder="e.g., 150.00">
+
+      <label for="shares">Shares:</label>
+      <input type="number" id="shares" name="shares" placeholder="e.g., 10">
+      
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+<div class="tooltip">
+  Total Returns: US$18,004
+  <span class="tooltip-text">Includes dividends</span>
+</div>
